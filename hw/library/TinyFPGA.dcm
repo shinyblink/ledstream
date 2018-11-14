@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Bx
+D TinyFPGA BX
+K FPGA
+$ENDCMP
+#
+#End Doc Library
