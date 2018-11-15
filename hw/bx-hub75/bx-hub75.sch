@@ -269,4 +269,138 @@ Wire Wire Line
 Wire Wire Line
 	6850 3350 6850 3500
 Connection ~ 6850 3350
+Text Label 3350 3350 0    50   ~ 10
+OE
+Text Label 3350 3250 0    50   ~ 10
+CLK
+Text Label 3350 3150 0    50   ~ 10
+C
+Text Label 3350 3050 0    50   ~ 10
+A
+Text Label 3350 2950 0    50   ~ 10
+B2
+Text Label 3350 2850 0    50   ~ 10
+R2
+Text Label 3350 2750 0    50   ~ 10
+B1
+Text Label 3350 2650 0    50   ~ 10
+R1
+Text Label 3350 2550 0    50   ~ 10
+LAT
+Text Label 3350 2450 0    50   ~ 10
+D
+Text Label 3350 2350 0    50   ~ 10
+B
+Text Label 3350 2250 0    50   ~ 10
+G2
+Text Label 2350 2250 2    50   ~ 10
+G1
+$Comp
+L Random:SN65HVD77D U?
+U 1 1 5BECF5D6
+P 2900 5150
+F 0 "U?" H 2900 5525 50  0000 C CNN
+F 1 "SN65HVD77D" H 2900 5434 50  0000 C CNN
+F 2 "" H 2900 4900 50  0001 C CNN
+F 3 "" H 2900 4900 50  0001 C CNN
+	1    2900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BECFB36
+P 2500 5000
+F 0 "#PWR?" H 2500 4850 50  0001 C CNN
+F 1 "+3.3V" H 2515 5173 50  0000 C CNN
+F 2 "" H 2500 5000 50  0001 C CNN
+F 3 "" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BECFBC2
+P 2500 5300
+F 0 "#PWR?" H 2500 5050 50  0001 C CNN
+F 1 "GND" H 2505 5127 50  0000 C CNN
+F 2 "" H 2500 5300 50  0001 C CNN
+F 3 "" H 2500 5300 50  0001 C CNN
+	1    2500 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5300 2600 5300
+Wire Wire Line
+	2500 5000 2600 5000
+Text Label 2600 5100 2    50   ~ 0
+RX
+Text Label 2600 5200 2    50   ~ 0
+TX
+$Comp
+L Connector:DB9_Male J?
+U 1 1 5BED180D
+P 4300 5100
+F 0 "J?" H 4480 5146 50  0000 L CNN
+F 1 "DB9_Male" H 4480 5055 50  0000 L CNN
+F 2 "" H 4300 5100 50  0001 C CNN
+F 3 " ~" H 4300 5100 50  0001 C CNN
+	1    4300 5100
+	1    0    0    -1  
+$EndComp
+Text Label 3200 5000 0    50   ~ 0
+RX+
+Text Label 3200 5100 0    50   ~ 0
+RX-
+Text Label 3200 5200 0    50   ~ 0
+TX+
+Text Label 3200 5300 0    50   ~ 0
+TX-
+Text Label 4000 5500 2    50   ~ 0
+RX+
+Text Label 4000 5300 2    50   ~ 0
+RX-
+Text Label 4000 5100 2    50   ~ 0
+TX+
+Text Label 4000 4900 2    50   ~ 0
+TX-
+$Comp
+L power:GND #PWR?
+U 1 1 5BEDE34B
+P 3700 4700
+F 0 "#PWR?" H 3700 4450 50  0001 C CNN
+F 1 "GND" H 3705 4527 50  0000 C CNN
+F 2 "" H 3700 4700 50  0001 C CNN
+F 3 "" H 3700 4700 50  0001 C CNN
+	1    3700 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4700 4000 4700
+$Comp
+L Device:R R?
+U 1 1 5BEE0AE3
+P 3500 5400
+F 0 "R?" H 3570 5446 50  0000 L CNN
+F 1 "120" H 3570 5355 50  0000 L CNN
+F 2 "" V 3430 5400 50  0001 C CNN
+F 3 "~" H 3500 5400 50  0001 C CNN
+	1    3500 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5300 3750 5300
+Wire Wire Line
+	3750 5300 3750 5250
+Wire Wire Line
+	3750 5250 3500 5250
+Wire Wire Line
+	3500 5550 3750 5550
+Wire Wire Line
+	3750 5550 3750 5500
+Wire Wire Line
+	3750 5500 4000 5500
+Text Label 2350 2350 2    50   ~ 0
+RX
+Text Label 2350 2450 2    50   ~ 0
+TX
 $EndSCHEMATC
