@@ -48,28 +48,6 @@ F 3 "" H 6350 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT244 U1
-U 1 1 5BECA77E
-P 5100 3150
-F 0 "U1" H 5100 4128 50  0000 C CNN
-F 1 "74HCT244" H 5100 4037 50  0000 C CNN
-F 2 "Package_SO:SO-20_12.8x7.5mm_P1.27mm" H 5100 3150 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT244.pdf" H 5100 3150 50  0001 C CNN
-	1    5100 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HCT244 U2
-U 1 1 5BECA862
-P 7600 2750
-F 0 "U2" H 7600 3728 50  0000 C CNN
-F 1 "74HCT244" H 7600 3637 50  0000 C CNN
-F 2 "Package_SO:SO-20_12.8x7.5mm_P1.27mm" H 7600 2750 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT244.pdf" H 7600 2750 50  0001 C CNN
-	1    7600 2750
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR0102
 U 1 1 5BECBFC3
 P 6850 3500
@@ -91,9 +69,6 @@ F 3 "" H 7600 1900 50  0001 C CNN
 	1    7600 1900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4600 3550 4600 3650
-Connection ~ 4600 3650
 Wire Wire Line
 	7600 1950 7600 1900
 $Comp
@@ -178,12 +153,9 @@ Wire Wire Line
 Wire Wire Line
 	5100 2350 4750 2350
 Wire Wire Line
-	8100 2350 8100 2250
-Wire Wire Line
 	8100 2250 8100 1900
 Wire Wire Line
 	8100 1900 7600 1900
-Connection ~ 8100 2250
 Connection ~ 7600 1900
 Text Label 4450 2650 2    50   ~ 10
 R1
@@ -551,4 +523,32 @@ $EndComp
 Connection ~ 3400 5000
 Wire Wire Line
 	3400 5300 2850 5300
+$Comp
+L 74xx:74HCT541 U1
+U 1 1 5BF5EC63
+P 5100 3150
+F 0 "U1" H 5100 4128 50  0000 C CNN
+F 1 "74HCT541" H 5100 4037 50  0000 C CNN
+F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 5100 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 5100 3150 50  0001 C CNN
+	1    5100 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3550 4600 3650
+Connection ~ 4600 3650
+$Comp
+L 74xx:74HCT541 U2
+U 1 1 5BF6300B
+P 7600 2750
+F 0 "U2" H 7600 1772 50  0000 C CNN
+F 1 "74HCT541" H 7600 1863 50  0000 C CNN
+F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 7600 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 7600 2750 50  0001 C CNN
+	1    7600 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 2350 8100 2250
+Connection ~ 8100 2250
 $EndSCHEMATC
