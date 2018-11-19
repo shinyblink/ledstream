@@ -307,17 +307,6 @@ F 3 "" H 7600 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
-U 1 1 5BECFB36
-P 7200 5000
-F 0 "#PWR?" H 7200 4850 50  0001 C CNN
-F 1 "+3.3V" H 7215 5173 50  0000 C CNN
-F 2 "" H 7200 5000 50  0001 C CNN
-F 3 "" H 7200 5000 50  0001 C CNN
-	1    7200 5000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5BECFBC2
 P 7200 5300
@@ -417,12 +406,12 @@ $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5BEF2B74
-P 2350 5000
-F 0 "#PWR?" H 2350 4850 50  0001 C CNN
-F 1 "+5V" H 2365 5173 50  0000 C CNN
-F 2 "" H 2350 5000 50  0001 C CNN
-F 3 "" H 2350 5000 50  0001 C CNN
-	1    2350 5000
+P 2300 5000
+F 0 "#PWR?" H 2300 4850 50  0001 C CNN
+F 1 "+5V" H 2315 5173 50  0000 C CNN
+F 2 "" H 2300 5000 50  0001 C CNN
+F 3 "" H 2300 5000 50  0001 C CNN
+	1    2300 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -439,7 +428,7 @@ $EndComp
 Wire Wire Line
 	2850 5300 2850 5400
 Wire Wire Line
-	2550 5000 2350 5000
+	2550 5000 2300 5000
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5BEF8C03
@@ -453,4 +442,113 @@ F 3 "" H 3400 5000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 5000 3150 5000
+$Comp
+L Memory_EEPROM:25LCxxx U?
+U 1 1 5BF300CE
+P 5100 5100
+F 0 "U?" H 5100 5578 50  0000 C CNN
+F 1 "25LCxxx" H 5100 5487 50  0000 C CNN
+F 2 "" H 5100 5100 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21832H.pdf" H 5100 5100 50  0001 C CNN
+	1    5100 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BF30EFA
+P 5100 5500
+F 0 "#PWR?" H 5100 5250 50  0001 C CNN
+F 1 "GND" H 5105 5327 50  0000 C CNN
+F 2 "" H 5100 5500 50  0001 C CNN
+F 3 "" H 5100 5500 50  0001 C CNN
+	1    5100 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5400 5100 5500
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5BF3331A
+P 7200 5000
+F 0 "#PWR?" H 7200 4850 50  0001 C CNN
+F 1 "+3V3" H 7215 5173 50  0000 C CNN
+F 2 "" H 7200 5000 50  0001 C CNN
+F 3 "" H 7200 5000 50  0001 C CNN
+	1    7200 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5BF33357
+P 5500 4800
+F 0 "#PWR?" H 5500 4650 50  0001 C CNN
+F 1 "+3V3" H 5515 4973 50  0000 C CNN
+F 2 "" H 5500 4800 50  0001 C CNN
+F 3 "" H 5500 4800 50  0001 C CNN
+	1    5500 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4800 5100 4800
+Text Label 4600 5200 2    50   ~ 0
+CS_EEPROM
+Wire Wire Line
+	4700 5200 4600 5200
+Text Label 5600 5000 0    50   ~ 0
+SCK
+Text Label 5600 5100 0    50   ~ 0
+MOSI
+Text Label 5600 5200 0    50   ~ 0
+MISO
+Wire Wire Line
+	5600 5200 5500 5200
+Wire Wire Line
+	5500 5100 5600 5100
+Wire Wire Line
+	5600 5000 5500 5000
+Wire Wire Line
+	4700 5000 4700 4800
+Wire Wire Line
+	4700 4800 5100 4800
+Connection ~ 5100 4800
+Wire Wire Line
+	4700 5100 4700 5000
+Connection ~ 4700 5000
+Text Label 2350 2550 2    50   ~ 0
+SCK
+Text Label 2350 2650 2    50   ~ 0
+MISO
+Text Label 2350 2750 2    50   ~ 0
+MOSI
+Text Label 2350 2850 2    50   ~ 0
+CS_EEPROM
+$Comp
+L Device:C C?
+U 1 1 5BF3FDFE
+P 2300 5150
+F 0 "C?" H 2415 5196 50  0000 L CNN
+F 1 "330uF" H 2415 5105 50  0000 L CNN
+F 2 "" H 2338 5000 50  0001 C CNN
+F 3 "~" H 2300 5150 50  0001 C CNN
+	1    2300 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 5000
+Wire Wire Line
+	2300 5300 2850 5300
+Connection ~ 2850 5300
+$Comp
+L Device:C C?
+U 1 1 5BF41834
+P 3400 5150
+F 0 "C?" H 3515 5196 50  0000 L CNN
+F 1 "100uF" H 3515 5105 50  0000 L CNN
+F 2 "" H 3438 5000 50  0001 C CNN
+F 3 "~" H 3400 5150 50  0001 C CNN
+	1    3400 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3400 5000
+Wire Wire Line
+	3400 5300 2850 5300
 $EndSCHEMATC
