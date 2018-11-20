@@ -487,11 +487,11 @@ Wire Wire Line
 	4700 5100 4700 5000
 Connection ~ 4700 5000
 Text Label 2350 2550 2    50   ~ 0
-SCK
-Text Label 2350 2650 2    50   ~ 0
-MISO
-Text Label 2350 2750 2    50   ~ 0
 MOSI
+Text Label 2350 2650 2    50   ~ 0
+SCK
+Text Label 2350 2750 2    50   ~ 0
+MISO
 Text Label 2350 2850 2    50   ~ 0
 CS_EEPROM
 $Comp
