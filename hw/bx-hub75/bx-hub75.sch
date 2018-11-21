@@ -265,7 +265,7 @@ Text Label 3350 2350 0    50   ~ 10
 B
 Text Label 3350 2250 0    50   ~ 10
 G2
-Text Label 2350 2250 2    50   ~ 10
+Text Label 3350 2150 0    50   ~ 10
 G1
 $Comp
 L Random:SN65HVD77D U5
@@ -360,10 +360,10 @@ Wire Wire Line
 	8450 5550 8450 5500
 Wire Wire Line
 	8450 5500 8700 5500
-Text Label 2350 2350 2    50   ~ 0
-RX
-Text Label 2350 2450 2    50   ~ 0
+Text Label 2350 2150 2    50   ~ 0
 TX
+Text Label 2350 2250 2    50   ~ 0
+RX
 $Comp
 L Regulator_Linear:LD1117S33TR_SOT223 U3
 U 1 1 5BEF264A
@@ -486,13 +486,13 @@ Connection ~ 5100 4800
 Wire Wire Line
 	4700 5100 4700 5000
 Connection ~ 4700 5000
-Text Label 2350 2550 2    50   ~ 0
+Text Label 2350 2350 2    50   ~ 0
 MOSI
-Text Label 2350 2650 2    50   ~ 0
+Text Label 2350 2450 2    50   ~ 0
 SCK
-Text Label 2350 2750 2    50   ~ 0
+Text Label 2350 2550 2    50   ~ 0
 MISO
-Text Label 2350 2850 2    50   ~ 0
+Text Label 2350 2650 2    50   ~ 0
 CS_EEPROM
 $Comp
 L Device:C C1
