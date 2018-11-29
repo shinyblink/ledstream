@@ -10,3 +10,6 @@ bx-hub75: output/bx-hub75.zip
 output/%.zip:
 	mkdir -p output
 	./fab.sh $(FAB) $@ $*/$*.kicad_pcb
+
+clean:
+	rm -rf output
