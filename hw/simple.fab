@@ -1,0 +1,39 @@
+plots:
+  - comment: Top Copper
+    layers:
+      - id: F_Cu
+
+  - comment: Bottom Copper
+    layers:
+      - id: B_Cu
+
+  - comment: Top Silk
+    layers:
+      - id: F_SilkS
+
+  - comment: Bottom Silk
+    layers:
+      - id: B_SilkS
+
+  - comment: Top Mask
+    layers:
+      - id: F_Mask
+
+  - comment: Bottom Mask
+    layers:
+      - id: B_Mask
+
+  - comment: Top Paste
+    layers:
+      - id: F_Paste
+
+  - comment: Bottom Paste
+    layers:
+      - id: B_Paste
+
+  - comment: Mechanical
+    layers:
+      - id: Edge_Cuts
+
+drill:
+    merge_npth: False
