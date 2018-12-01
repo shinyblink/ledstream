@@ -1,6 +1,12 @@
 # KiCAD trash files.
 *.bck
 *bak
+*tmp
 
 # Zips, mostly the gerber files.
 *.zip
+
+# Generated files.
+*.html
+*.xml
+*.csv
