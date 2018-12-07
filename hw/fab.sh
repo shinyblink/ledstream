@@ -1,5 +1,6 @@
 #!/bin/sh
 # Produce gerbers.
+set -e
 
 if [ ! $# -eq 3 ]; then
 	echo "Usage: $(basename $0) config.fab gerber_out.zip pcb.kicad_pcb"
