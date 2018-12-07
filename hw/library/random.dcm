@@ -3,6 +3,7 @@ EESchema-DOCLIB  Version 2.0
 $CMP SN65HVD77D
 D RS-485 Full Duplex Driver IC
 K RS485
+F http://www.ti.com/lit/ds/symlink/sn65hvd77.pdf
 $ENDCMP
 #
 #End Doc Library
