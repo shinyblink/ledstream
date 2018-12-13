@@ -48,7 +48,7 @@ module smitest
    reg [7:0]  data;
    initial data = 1'b0;
 
-   assign smi_out = data;
+   assign smi_in = data;
 
    always @(posedge clk_64mhz) begin
       if (write) begin
@@ -57,8 +57,9 @@ module smitest
          // pi requests a read, write some data.
          if (first) begin
             data <= 7'b1000101; // E
+            first <= 1'b0;
          end else begin
-            data <= data ^ 7'b0100000;
+            data <= data ^ 7'b0100000; // case flip
          end
       end
    end

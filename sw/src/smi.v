@@ -31,10 +31,11 @@ module smi
    initial re_state = 1'b0;
    initial we_state = 1'b0;
 
+   // !OE is read, !WE is write.
    wire   piwrite;
    wire   piread;
-   assign piwrite = re & ~re_state;
-   assign piread = we & ~we_state;
+   assign piread = re & ~re_state;
+   assign piwrite = we & ~we_state;
    assign read = piread;
 
 
@@ -75,7 +76,7 @@ module smi
       if (reset) begin
          re_state <= 1'b0;
          we_state <= 1'b0;
-         rout <= 1'b0;
+         out <= 1'b0;
          rout <= 1'b0;
          rwlast <= 1'b0;
          rwrite <= 1'b0;
