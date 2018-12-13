@@ -10,3 +10,12 @@
 *.html
 *.xml
 *.csv
+
+*.bin
+*.json
+*.rpt
+
+# Garbage files.
+.#*
+*.swp
+*~
