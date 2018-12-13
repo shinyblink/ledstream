@@ -13,7 +13,7 @@ BX:
 
 # Projects
 bx-smitest: TOP := smitest
-bx-smitest: BX targets/bx-smitest.bin targets/bx-smitest.rpt
+bx-smitest: targets/bx-smitest.bin BX targets/bx-smitest.rpt
 	tinyprog -p $<
 
 # Shared targets.
@@ -23,8 +23,8 @@ bx-smitest: BX targets/bx-smitest.bin targets/bx-smitest.rpt
 
 %.asc: %.blif %.json $(PIN_DEF)
 	# PNR.
-	if command -v nextpnr; then \
-		nextpnr-ice40 --$(FPGA) --json $*.json --pcf $(PIN_DEF) --asc $@; \
+	if command -v nextpnr-ice40; then \
+		nextpnr-ice40 --$(FPGA) --package $(PACKAGE) --json $*.json --pcf $(PIN_DEF) --asc $@; \
 	else \
 		arachne-pnr -d $(CLASS) -P $(PACKAGE) -o $@ -p $(PIN_DEF) $<; \
 	fi
