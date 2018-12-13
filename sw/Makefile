@@ -32,6 +32,10 @@ bx-smitest: targets/bx-smitest.bin BX targets/bx-smitest.rpt
 %.bin: %.asc
 	icepack $< $@
 
+# Generative targets.
+src/pll.v:
+	icepll -i 16 -o 64 -m -f $@
+
 # Analysis.
 %.rpt: %.asc
 	icetime -d $(FPGA) -mtr $@ $<
