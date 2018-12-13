@@ -28,14 +28,18 @@ module smi
 
    reg    re_state;
    reg    we_state;
+   reg    re_old;
+   reg    we_old;
    initial re_state = 1'b0;
    initial we_state = 1'b0;
+   initial re_old = 1'b0;
+   initial we_old = 1'b0;
 
    // !OE is read, !WE is write.
    wire   piwrite;
    wire   piread;
-   assign piread = re & ~re_state;
-   assign piwrite = we & ~we_state;
+   assign piread = re_state & ~re_old;
+   assign piwrite = we_state & ~we_old;
    assign read = piread;
 
 
@@ -76,6 +80,8 @@ module smi
       if (reset) begin
          re_state <= 1'b0;
          we_state <= 1'b0;
+	 re_old <= 1'b0;
+	 we_old <= 1'b0;
          out <= 1'b0;
          rout <= 1'b0;
          rwlast <= 1'b0;
@@ -84,6 +90,8 @@ module smi
          // save state so we can compare it.
          re_state <= re;
          we_state <= we;
+         re_old <= re_state;
+	 we_old <= we_state;
 
          if (rwlast) begin
             rout <= wout;
