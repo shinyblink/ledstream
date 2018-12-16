@@ -72,8 +72,8 @@ module etc1_decode
    input         clk,
    input         reset,
    input [63:0]  block,
-   input [2:0]   x,
-   input [2:0]   y,
+   input [1:0]   x,
+   input [1:0]   y,
    output [23:0] pixel);
 
    wire [32:0]   palette;
@@ -103,7 +103,8 @@ module etc1_decode
    wire [7:0]    palette0_g;
    wire [7:0]    palette0_b;
 
-   wire [2:0]    index = {palette[0] ? y[1] : x[1], block[16 + y + (x << 2)], block[y + (x << 2)]};
+   wire [4:0]    block_index   = {1'b0, x, y};
+   wire [2:0]    index = {palette[0] ? y[1] : x[1], block[block_index | 16], block[block_index]};
 
    wire [4:0]    intensity_index = { index[2] ? palette[5:2] : palette[7:5], index[1:0] }; // 0,0 is actually j in c
 
