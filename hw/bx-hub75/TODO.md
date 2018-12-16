@@ -15,3 +15,6 @@ Thanks to @Georgeloak for the tips.
 * [ ] Consider SN74LVC8T245MDWREP instead of 74HCT541:
   - Getting close to the VIH Min rating of the part with the TinyFPGA 3.3v outputs.
 * [ ] Take some lessons from https://github.com/icebreaker-fpga/icebreaker-pmod/tree/master/led-panel/v1.2a
+* [ ] Not enough spacing for the HUB75 connector, need at least a millimeter more space.
+* [ ] Power socket from Mouser does not match footprint of PCB.
+  - It will work with some filing and pressure, but it's far from ideal.

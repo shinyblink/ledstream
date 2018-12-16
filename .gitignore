@@ -15,6 +15,9 @@
 *.json
 *.rpt
 
+*.vcd
+*_tb
+
 # Garbage files.
 .#*
 *.swp

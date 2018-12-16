@@ -1,6 +1,6 @@
 # Rather generic Makefile for FPGA projects.
 
-all: bx-smitest
+all: bx-hub75
 
 # Device specific rules.
 # Yes, it's cursed.
@@ -15,6 +15,11 @@ BX:
 bx-smitest: TOP := smitest
 bx-smitest: targets/bx-smitest.bin BX targets/bx-smitest.rpt
 	tinyprog -p $<
+
+bx-hub75: TOP := smitest
+bx-hub75: targets/bx-hub75.bin BX targets/bx-hub75.rpt
+	tinyprog -p $<
+
 
 # Shared targets.
 %.blif %.json: %.v
@@ -40,6 +45,14 @@ src/pll.v:
 %.rpt: %.asc
 	icetime -d $(FPGA) -mtr $@ $<
 
+%_tb: %_tb.v %.v
+	iverilog -g2005 -o $@ $^
+
+%_tb.vcd: %_tb
+	vvp -N $< +vcd=$@
+
+test: $(patsubst %.v,%.vcd,$(wildcard src/*_tb.v))
+
 # Clean.
 clean:
-	rm -f targets/*.bin targets/*.asc targets/*.blif targets/*.rpt
+	rm -f targets/*.bin targets/*.asc targets/*.blif targets/*.rpt src/*.vcd src/*_tb
