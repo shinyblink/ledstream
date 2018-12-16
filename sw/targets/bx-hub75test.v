@@ -36,9 +36,14 @@ module hub75test
    pll quad(CLK, clk_64mhz, locked);
 
    // HUB75 stuff.
-   wire [4:0] led_addr = {PIN_24, PIN_10, PIN_3, PIN_11, PIN_4};
-   wire [2:0] led_rgb1 = {PIN_8, PIN_13, PIN_7};
-   wire [2:0] led_rgb2 = {PIN_6, PIN_12, PIN_5};
+   wire [4:0] led_addr;
+   wire [2:0] led_rgb1;
+   wire [2:0] led_rgb2;
+
+   assign {PIN_24, PIN_10, PIN_3, PIN_11, PIN_4} = led_addr;
+   assign {PIN_8, PIN_13, PIN_7} = led_rgb1;
+   assign {PIN_6, PIN_12, PIN_5} = led_rgb2;
+
 
    reg [2:0] rgb1;
    reg [2:0] rgb2;
