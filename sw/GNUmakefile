@@ -16,7 +16,11 @@ bx-smitest: TOP := smitest
 bx-smitest: targets/bx-smitest.bin BX targets/bx-smitest.rpt
 	tinyprog -p $<
 
-bx-hub75: TOP := smitest
+bx-hub75test: TOP := hub75test
+bx-hub75test: targets/bx-hub75test.bin BX targets/bx-hub75test.rpt
+	tinyprog -p $<
+
+bx-hub75: TOP := bx_hub75
 bx-hub75: targets/bx-hub75.bin BX targets/bx-hub75.rpt
 	tinyprog -p $<
 
