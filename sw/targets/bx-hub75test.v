@@ -60,10 +60,11 @@ module hub75test
 
    hub75_output #(.ROWBITS(ROWBITS)) h75o
      (
+      .clk(CLK),
       .bus(bus_end),
       .reset(reset),
-      .led_rgb1(rgb1),
-      .led_rgb2(rgb2),
+      .led_rgb1(led_rgb1),
+      .led_rgb2(led_rgb2),
       .led_addr(led_addr),
       .led_sclk(PIN_2),
       .led_blank(PIN_1),

@@ -7,38 +7,34 @@
 // Signal packing.
 module hub75_pack
   #(parameter ROWBITS = 6)
-  (
-   output [8+ROWBITS-1:0] bus,
-   input [0:0]            clk,
-   input [0:0]            newframe,
-   input [0:0]            endframe,
-   input [4:0]            column,
-   input [ROWBITS-1:0]    row);
+   (
+    output [8+ROWBITS-1:0] bus,
+    input [0:0]            newframe,
+    input [0:0]            endframe,
+    input [4:0]            column,
+    input [ROWBITS-1:0]    row);
 
    //assign bus = {clk, newframe, endframe, column, row};
-   assign bus[0] = clk;
-   assign bus[1] = newframe;
-   assign bus[2] = endframe;
-   assign bus[7:3] = column[4:0];
-   assign bus[8+ROWBITS-1:8] = row[ROWBITS-1:0];
+   assign bus[0] = newframe;
+   assign bus[1] = endframe;
+   assign bus[6:1] = column[4:0];
+   assign bus[7+ROWBITS-1:7] = row[ROWBITS-1:0];
 endmodule // hub75_pack
 
 module hub75_unpack
   #(parameter ROWBITS = 6)
-  (
-   input [8+ROWBITS-1:0] bus,
-   output [0:0]          clk,
-   output [0:0]          newframe,
-   output [0:0]          endframe,
-   output [4:0]          column,
-   output [ROWBITS-1:0]  row);
+   (
+    input [8+ROWBITS-1:0] bus,
+    output [0:0]          newframe,
+    output [0:0]          endframe,
+    output [4:0]          column,
+    output [ROWBITS-1:0]  row);
 
    //assign {clk, newframe, endframe, column, row} = bus;
-   assign clk = bus[0];
-   assign newframe = bus[1];
-   assign endframe = bus[2];
-   assign column[4:0] = bus[7:3];
-   assign row[ROWBITS-1:0] = bus[8+ROWBITS-1:8];
+   assign newframe = bus[0];
+   assign endframe = bus[1];
+   assign column[4:0] = bus[6:2];
+   assign row[ROWBITS-1:0] = bus[7+ROWBITS-1:7];
 endmodule // hub75_unpack
 
 // Driver, generates pulses.
@@ -64,7 +60,7 @@ module hub75_driver
 
    hub75_pack packer
      (
-      .clk(clk),
+      .bus(bus),
       .newframe(newframe),
       .endframe(endframe),
       .column(column),
@@ -84,6 +80,8 @@ module hub75_driver
       if (reset) begin
          column <= 1'b0;
          row = 1'b0;
+         newframe <= 1'b0;
+         endframe <= 1'b0;
       end else begin
          case (state)
            S_START:
@@ -106,7 +104,7 @@ module hub75_driver
                 row <= row + 1;
                 if (row == ROWS - 2) begin // end of matrix.
                    endframe <= 1'b1;
-                  state <= S_END;
+                   state <= S_END;
                 end else begin
                    state <= S_SHIFT;
                 end
@@ -128,6 +126,7 @@ endmodule // hub75_driver
 module hub75_output
   #(parameter ROWBITS = 6)
    (
+    input [0:0]           clk,
     input [0:0]           reset,
     input [2:0]           rgb1,
     input [2:0]           rgb2,
@@ -139,7 +138,6 @@ module hub75_output
     output [2:0]          led_rgb1,
     output [2:0]          led_rgb2);
 
-   wire [0:0]             clk;
    wire [0:0]             newframe;
    wire [0:0]             endframe;
    wire [4:0]             column;
@@ -148,8 +146,8 @@ module hub75_output
    hub75_unpack unpack
      (
       .bus(bus),
-      .clk(clk),
       .newframe(newframe),
+      .endframe(endframe),
       .column(column),
       .row(row));
 

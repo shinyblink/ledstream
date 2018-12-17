@@ -28,7 +28,7 @@ bx-hub75: targets/bx-hub75.bin BX targets/bx-hub75.rpt
 # Shared targets.
 %.blif %.json: %.v
 	# Synthesis.
-	yosys -p 'synth_ice40 -top $(TOP) -blif $*.blif -json $*.json' $<
+	yosys -q -p 'synth_ice40 -top $(TOP) -blif $*.blif -json $*.json' $<
 
 %.asc: %.blif %.json $(PIN_DEF)
 	# PNR.
