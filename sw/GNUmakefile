@@ -5,7 +5,6 @@ all: bx-hub75
 # Device specific rules.
 # Yes, it's cursed.
 BX: $(eval PIN_DEF := pins/BX.pcf)
-BX: $(eval CLASS := 8k)
 BX: $(eval FPGA := lp8k)
 BX: $(eval PACKAGE := cm81)
 BX:
@@ -35,7 +34,7 @@ bx-hub75: targets/bx-hub75.bin BX targets/bx-hub75.rpt
 	if command -v nextpnr-ice40; then \
 		nextpnr-ice40 --$(FPGA) --package $(PACKAGE) --json $*.json --pcf $(PIN_DEF) --asc $@; \
 	else \
-		arachne-pnr -d $(CLASS) -P $(PACKAGE) -o $@ -p $(PIN_DEF) $<; \
+		arachne-pnr -d $(subst up,,$(subst hx,,$(subst lp,,$(FPGA)))) -P $(PACKAGE) -o $@ -p $(PIN_DEF) $<; \
 	fi
 
 %.bin: %.asc

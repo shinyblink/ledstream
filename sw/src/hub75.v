@@ -17,7 +17,7 @@ module hub75_pack
    //assign bus = {clk, newframe, endframe, column, row};
    assign bus[0] = newframe;
    assign bus[1] = endframe;
-   assign bus[6:1] = column[4:0];
+   assign bus[6:2] = column[4:0];
    assign bus[7+ROWBITS-1:7] = row[ROWBITS-1:0];
 endmodule // hub75_pack
 
@@ -79,7 +79,7 @@ module hub75_driver
    always @(posedge clk) begin
       if (reset) begin
          column <= 1'b0;
-         row = 1'b0;
+         row <= 1'b0;
          newframe <= 1'b0;
          endframe <= 1'b0;
       end else begin
