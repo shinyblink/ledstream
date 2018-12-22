@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name TinyFPGA)(type KiCad)(uri "$(KIPRJMOD)/../library/TinyFPGA.pretty")(options "")(descr "Luke Valenty's TinyFPGA series FPGAs"))
+  (lib (name Random)(type KiCad)(uri "$(KIPRJMOD)/../library/random.pretty")(options "")(descr "Random Stuff"))
+)
