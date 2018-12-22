@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name TinyFPGA)(type Legacy)(uri "$(KIPRJMOD)/../library/TinyFPGA.lib")(options "")(descr "Luke Valenty's TinyFPGA series FPGAs"))
-  (lib (name Random)(type Legacy)(uri "$(KIPRJMOD)/../library/random.lib")(options "")(descr "Random Stuff"))
-)
