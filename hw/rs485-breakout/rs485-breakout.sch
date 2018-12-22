@@ -1,0 +1,685 @@
+EESchema Schematic File Version 4
+LIBS:rs485-breakout-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "15 nov 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:DB9_Female J1
+U 1 1 5C0CA4FC
+P 9650 1700
+F 0 "J1" H 9829 1746 50  0000 L CNN
+F 1 "DB9_Female" H 9829 1655 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 9650 1700 50  0001 C CNN
+F 3 " ~" H 9650 1700 50  0001 C CNN
+	1    9650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Random:SN65HVD77D U1
+U 1 1 5C0D2DE5
+P 7900 1700
+F 0 "U1" H 7900 2075 50  0000 C CNN
+F 1 "SN65HVD77D" H 7900 1984 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7900 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd77.pdf" H 7900 1450 50  0001 C CNN
+	1    7900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C0D33B9
+P 9100 2100
+F 0 "#PWR0101" H 9100 1850 50  0001 C CNN
+F 1 "GND" H 9105 1927 50  0000 C CNN
+F 2 "" H 9100 2100 50  0001 C CNN
+F 3 "" H 9100 2100 50  0001 C CNN
+	1    9100 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2100 9100 2100
+$Comp
+L Device:R R1
+U 1 1 5C10CCEF
+P 9050 1400
+F 0 "R1" H 8980 1354 50  0000 R CNN
+F 1 "120" H 8980 1445 50  0000 R CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 8980 1400 50  0001 C CNN
+F 3 "~" H 9050 1400 50  0001 C CNN
+F 4 "dnf" H 9050 1400 50  0001 C CNN "fit_field"
+	1    9050 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C10CDC3
+P 9050 1800
+F 0 "R2" H 9120 1846 50  0000 L CNN
+F 1 "120" H 9120 1755 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 8980 1800 50  0001 C CNN
+F 3 "~" H 9050 1800 50  0001 C CNN
+	1    9050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1650 9250 1650
+Wire Wire Line
+	9250 1650 9250 1700
+Wire Wire Line
+	9250 1700 9350 1700
+Wire Wire Line
+	9050 1950 9250 1950
+Wire Wire Line
+	9250 1950 9250 1900
+Wire Wire Line
+	9250 1900 9350 1900
+Wire Wire Line
+	9050 1250 9250 1250
+Wire Wire Line
+	9250 1250 9250 1300
+Wire Wire Line
+	9250 1300 9350 1300
+Wire Wire Line
+	9050 1550 9250 1550
+Wire Wire Line
+	9250 1550 9250 1500
+Wire Wire Line
+	9250 1500 9350 1500
+$Comp
+L power:GND #PWR0108
+U 1 1 5C1625C4
+P 7500 1850
+F 0 "#PWR0108" H 7500 1600 50  0001 C CNN
+F 1 "GND" H 7505 1677 50  0000 C CNN
+F 2 "" H 7500 1850 50  0001 C CNN
+F 3 "" H 7500 1850 50  0001 C CNN
+	1    7500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 1850 7600 1850
+Wire Wire Line
+	7600 1550 7500 1550
+Text Label 7600 1650 2    50   ~ 0
+RX_1
+Text Label 7600 1750 2    50   ~ 0
+TX_1
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5C1F6857
+P 7500 1550
+F 0 "#PWR0107" H 7500 1400 50  0001 C CNN
+F 1 "+3.3V" H 7515 1723 50  0000 C CNN
+F 2 "" H 7500 1550 50  0001 C CNN
+F 3 "" H 7500 1550 50  0001 C CNN
+	1    7500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Large #LOGO1
+U 1 1 5C2FB99A
+P 1150 7200
+F 0 "#LOGO1" H 1150 7700 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Large" H 1150 6800 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_9.8x8mm_SilkScreen" H 1150 7200 50  0001 C CNN
+F 3 "~" H 1150 7200 50  0001 C CNN
+	1    1150 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C2DA94F
+P 2200 3950
+F 0 "C2" H 2315 3996 50  0000 L CNN
+F 1 "100uf" H 2315 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.4" H 2238 3800 50  0001 C CNN
+F 3 "~" H 2200 3950 50  0001 C CNN
+	1    2200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0116
+U 1 1 5C2DA8CD
+P 2200 3800
+F 0 "#PWR0116" H 2200 3650 50  0001 C CNN
+F 1 "+3.3V" H 2215 3973 50  0000 C CNN
+F 2 "" H 2200 3800 50  0001 C CNN
+F 3 "" H 2200 3800 50  0001 C CNN
+	1    2200 3800
+	1    0    0    -1  
+$EndComp
+Text Label 8200 1550 0    50   ~ 0
+RX_1+
+Text Label 8200 1650 0    50   ~ 0
+RX_1-
+Text Label 8200 1750 0    50   ~ 0
+TX_1-
+Text Label 8200 1850 0    50   ~ 0
+TX_1+
+Text Label 8900 1250 2    50   ~ 0
+TX_1+
+Wire Wire Line
+	8900 1250 9050 1250
+Connection ~ 9050 1250
+Text Label 8900 1550 2    50   ~ 0
+TX_1-
+Wire Wire Line
+	8900 1550 9050 1550
+Connection ~ 9050 1550
+Text Label 8900 1650 2    50   ~ 0
+RX_1+
+Text Label 8900 1950 2    50   ~ 0
+RX_1-
+Wire Wire Line
+	8900 1950 9050 1950
+Connection ~ 9050 1950
+Wire Wire Line
+	9050 1650 8900 1650
+Connection ~ 9050 1650
+$Comp
+L Connector:DB9_Female J2
+U 1 1 5C242947
+P 9700 3050
+F 0 "J2" H 9879 3096 50  0000 L CNN
+F 1 "DB9_Female" H 9879 3005 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 9700 3050 50  0001 C CNN
+F 3 " ~" H 9700 3050 50  0001 C CNN
+	1    9700 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Random:SN65HVD77D U2
+U 1 1 5C24294E
+P 7950 3050
+F 0 "U2" H 7950 3425 50  0000 C CNN
+F 1 "SN65HVD77D" H 7950 3334 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7950 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd77.pdf" H 7950 2800 50  0001 C CNN
+	1    7950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C242955
+P 9150 3450
+F 0 "#PWR0102" H 9150 3200 50  0001 C CNN
+F 1 "GND" H 9155 3277 50  0000 C CNN
+F 2 "" H 9150 3450 50  0001 C CNN
+F 3 "" H 9150 3450 50  0001 C CNN
+	1    9150 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3450 9150 3450
+$Comp
+L Device:R R3
+U 1 1 5C24295D
+P 9100 2750
+F 0 "R3" H 9030 2704 50  0000 R CNN
+F 1 "120" H 9030 2795 50  0000 R CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 2750 50  0001 C CNN
+F 3 "~" H 9100 2750 50  0001 C CNN
+F 4 "dnf" H 9100 2750 50  0001 C CNN "fit_field"
+	1    9100 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C242964
+P 9100 3150
+F 0 "R4" H 9170 3196 50  0000 L CNN
+F 1 "120" H 9170 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 3150 50  0001 C CNN
+F 3 "~" H 9100 3150 50  0001 C CNN
+	1    9100 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 3000 9300 3000
+Wire Wire Line
+	9300 3000 9300 3050
+Wire Wire Line
+	9300 3050 9400 3050
+Wire Wire Line
+	9100 3300 9300 3300
+Wire Wire Line
+	9300 3300 9300 3250
+Wire Wire Line
+	9300 3250 9400 3250
+Wire Wire Line
+	9100 2600 9300 2600
+Wire Wire Line
+	9300 2600 9300 2650
+Wire Wire Line
+	9300 2650 9400 2650
+Wire Wire Line
+	9100 2900 9300 2900
+Wire Wire Line
+	9300 2900 9300 2850
+Wire Wire Line
+	9300 2850 9400 2850
+$Comp
+L power:GND #PWR0103
+U 1 1 5C242977
+P 7550 3200
+F 0 "#PWR0103" H 7550 2950 50  0001 C CNN
+F 1 "GND" H 7555 3027 50  0000 C CNN
+F 2 "" H 7550 3200 50  0001 C CNN
+F 3 "" H 7550 3200 50  0001 C CNN
+	1    7550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3200 7650 3200
+Wire Wire Line
+	7650 2900 7550 2900
+Text Label 7650 3000 2    50   ~ 0
+RX_2
+Text Label 7650 3100 2    50   ~ 0
+TX_2
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5C242981
+P 7550 2900
+F 0 "#PWR0104" H 7550 2750 50  0001 C CNN
+F 1 "+3.3V" H 7565 3073 50  0000 C CNN
+F 2 "" H 7550 2900 50  0001 C CNN
+F 3 "" H 7550 2900 50  0001 C CNN
+	1    7550 2900
+	1    0    0    -1  
+$EndComp
+Text Label 8250 2900 0    50   ~ 0
+RX_2+
+Text Label 8250 3000 0    50   ~ 0
+RX_2-
+Text Label 8250 3100 0    50   ~ 0
+TX_2-
+Text Label 8250 3200 0    50   ~ 0
+TX_2+
+Text Label 8950 2600 2    50   ~ 0
+TX_2+
+Wire Wire Line
+	8950 2600 9100 2600
+Connection ~ 9100 2600
+Text Label 8950 2900 2    50   ~ 0
+TX_2-
+Wire Wire Line
+	8950 2900 9100 2900
+Connection ~ 9100 2900
+Text Label 8950 3000 2    50   ~ 0
+RX_2+
+Text Label 8950 3300 2    50   ~ 0
+RX_2-
+Wire Wire Line
+	8950 3300 9100 3300
+Connection ~ 9100 3300
+Wire Wire Line
+	9100 3000 8950 3000
+Connection ~ 9100 3000
+$Comp
+L Connector:DB9_Female J3
+U 1 1 5C2438D1
+P 9700 4450
+F 0 "J3" H 9879 4496 50  0000 L CNN
+F 1 "DB9_Female" H 9879 4405 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 9700 4450 50  0001 C CNN
+F 3 " ~" H 9700 4450 50  0001 C CNN
+	1    9700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Random:SN65HVD77D U3
+U 1 1 5C2438D8
+P 7950 4450
+F 0 "U3" H 7950 4825 50  0000 C CNN
+F 1 "SN65HVD77D" H 7950 4734 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7950 4200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd77.pdf" H 7950 4200 50  0001 C CNN
+	1    7950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C2438DF
+P 9150 4850
+F 0 "#PWR0105" H 9150 4600 50  0001 C CNN
+F 1 "GND" H 9155 4677 50  0000 C CNN
+F 2 "" H 9150 4850 50  0001 C CNN
+F 3 "" H 9150 4850 50  0001 C CNN
+	1    9150 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4850 9150 4850
+$Comp
+L Device:R R5
+U 1 1 5C2438E7
+P 9100 4150
+F 0 "R5" H 9030 4104 50  0000 R CNN
+F 1 "120" H 9030 4195 50  0000 R CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 4150 50  0001 C CNN
+F 3 "~" H 9100 4150 50  0001 C CNN
+F 4 "dnf" H 9100 4150 50  0001 C CNN "fit_field"
+	1    9100 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C2438EE
+P 9100 4550
+F 0 "R6" H 9170 4596 50  0000 L CNN
+F 1 "120" H 9170 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 4550 50  0001 C CNN
+F 3 "~" H 9100 4550 50  0001 C CNN
+	1    9100 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 4400 9300 4400
+Wire Wire Line
+	9300 4400 9300 4450
+Wire Wire Line
+	9300 4450 9400 4450
+Wire Wire Line
+	9100 4700 9300 4700
+Wire Wire Line
+	9300 4700 9300 4650
+Wire Wire Line
+	9300 4650 9400 4650
+Wire Wire Line
+	9100 4000 9300 4000
+Wire Wire Line
+	9300 4000 9300 4050
+Wire Wire Line
+	9300 4050 9400 4050
+Wire Wire Line
+	9100 4300 9300 4300
+Wire Wire Line
+	9300 4300 9300 4250
+Wire Wire Line
+	9300 4250 9400 4250
+$Comp
+L power:GND #PWR0106
+U 1 1 5C243901
+P 7550 4600
+F 0 "#PWR0106" H 7550 4350 50  0001 C CNN
+F 1 "GND" H 7555 4427 50  0000 C CNN
+F 2 "" H 7550 4600 50  0001 C CNN
+F 3 "" H 7550 4600 50  0001 C CNN
+	1    7550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4600 7650 4600
+Wire Wire Line
+	7650 4300 7550 4300
+Text Label 7650 4400 2    50   ~ 0
+RX_3
+Text Label 7650 4500 2    50   ~ 0
+TX_3
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5C24390B
+P 7550 4300
+F 0 "#PWR0109" H 7550 4150 50  0001 C CNN
+F 1 "+3.3V" H 7565 4473 50  0000 C CNN
+F 2 "" H 7550 4300 50  0001 C CNN
+F 3 "" H 7550 4300 50  0001 C CNN
+	1    7550 4300
+	1    0    0    -1  
+$EndComp
+Text Label 8250 4300 0    50   ~ 0
+RX_3+
+Text Label 8250 4400 0    50   ~ 0
+RX_3-
+Text Label 8250 4500 0    50   ~ 0
+TX_3-
+Text Label 8250 4600 0    50   ~ 0
+TX_3+
+Text Label 8950 4000 2    50   ~ 0
+TX_3+
+Wire Wire Line
+	8950 4000 9100 4000
+Connection ~ 9100 4000
+Text Label 8950 4300 2    50   ~ 0
+TX_3-
+Wire Wire Line
+	8950 4300 9100 4300
+Connection ~ 9100 4300
+Text Label 8950 4400 2    50   ~ 0
+RX_3+
+Text Label 8950 4700 2    50   ~ 0
+RX_3-
+Wire Wire Line
+	8950 4700 9100 4700
+Connection ~ 9100 4700
+Wire Wire Line
+	9100 4400 8950 4400
+Connection ~ 9100 4400
+$Comp
+L Connector:DB9_Female J4
+U 1 1 5C245952
+P 9700 5850
+F 0 "J4" H 9879 5896 50  0000 L CNN
+F 1 "DB9_Female" H 9879 5805 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 9700 5850 50  0001 C CNN
+F 3 " ~" H 9700 5850 50  0001 C CNN
+	1    9700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Random:SN65HVD77D U4
+U 1 1 5C245959
+P 7950 5850
+F 0 "U4" H 7950 6225 50  0000 C CNN
+F 1 "SN65HVD77D" H 7950 6134 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7950 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd77.pdf" H 7950 5600 50  0001 C CNN
+	1    7950 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5C245960
+P 9150 6250
+F 0 "#PWR0110" H 9150 6000 50  0001 C CNN
+F 1 "GND" H 9155 6077 50  0000 C CNN
+F 2 "" H 9150 6250 50  0001 C CNN
+F 3 "" H 9150 6250 50  0001 C CNN
+	1    9150 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 6250 9150 6250
+$Comp
+L Device:R R7
+U 1 1 5C245968
+P 9100 5550
+F 0 "R7" H 9030 5504 50  0000 R CNN
+F 1 "120" H 9030 5595 50  0000 R CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 5550 50  0001 C CNN
+F 3 "~" H 9100 5550 50  0001 C CNN
+F 4 "dnf" H 9100 5550 50  0001 C CNN "fit_field"
+	1    9100 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5C24596F
+P 9100 5950
+F 0 "R8" H 9170 5996 50  0000 L CNN
+F 1 "120" H 9170 5905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9030 5950 50  0001 C CNN
+F 3 "~" H 9100 5950 50  0001 C CNN
+	1    9100 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 5800 9300 5800
+Wire Wire Line
+	9300 5800 9300 5850
+Wire Wire Line
+	9300 5850 9400 5850
+Wire Wire Line
+	9100 6100 9300 6100
+Wire Wire Line
+	9300 6100 9300 6050
+Wire Wire Line
+	9300 6050 9400 6050
+Wire Wire Line
+	9100 5400 9300 5400
+Wire Wire Line
+	9300 5400 9300 5450
+Wire Wire Line
+	9300 5450 9400 5450
+Wire Wire Line
+	9100 5700 9300 5700
+Wire Wire Line
+	9300 5700 9300 5650
+Wire Wire Line
+	9300 5650 9400 5650
+$Comp
+L power:GND #PWR0111
+U 1 1 5C245982
+P 7550 6000
+F 0 "#PWR0111" H 7550 5750 50  0001 C CNN
+F 1 "GND" H 7555 5827 50  0000 C CNN
+F 2 "" H 7550 6000 50  0001 C CNN
+F 3 "" H 7550 6000 50  0001 C CNN
+	1    7550 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 6000 7650 6000
+Wire Wire Line
+	7650 5700 7550 5700
+Text Label 7650 5800 2    50   ~ 0
+RX_4
+Text Label 7650 5900 2    50   ~ 0
+TX_4
+$Comp
+L power:+3.3V #PWR0112
+U 1 1 5C24598C
+P 7550 5700
+F 0 "#PWR0112" H 7550 5550 50  0001 C CNN
+F 1 "+3.3V" H 7565 5873 50  0000 C CNN
+F 2 "" H 7550 5700 50  0001 C CNN
+F 3 "" H 7550 5700 50  0001 C CNN
+	1    7550 5700
+	1    0    0    -1  
+$EndComp
+Text Label 8250 5700 0    50   ~ 0
+RX_4+
+Text Label 8250 5800 0    50   ~ 0
+RX_4-
+Text Label 8250 5900 0    50   ~ 0
+TX_4-
+Text Label 8250 6000 0    50   ~ 0
+TX_4+
+Text Label 8950 5400 2    50   ~ 0
+TX_4+
+Wire Wire Line
+	8950 5400 9100 5400
+Connection ~ 9100 5400
+Text Label 8950 5700 2    50   ~ 0
+TX_4-
+Wire Wire Line
+	8950 5700 9100 5700
+Connection ~ 9100 5700
+Text Label 8950 5800 2    50   ~ 0
+RX_4+
+Text Label 8950 6100 2    50   ~ 0
+RX_4-
+Wire Wire Line
+	8950 6100 9100 6100
+Connection ~ 9100 6100
+Wire Wire Line
+	9100 5800 8950 5800
+Connection ~ 9100 5800
+$Comp
+L Random:IO8_HEADER IO1
+U 1 1 5C249B21
+P 2800 3400
+F 0 "IO1" H 3228 3396 50  0000 L CNN
+F 1 "IO8_HEADER" H 3228 3305 50  0000 L CNN
+F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" V 2050 3600 50  0001 C CNN
+F 3 "" V 2050 3600 50  0001 C CNN
+	1    2800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3800 2450 3800
+Connection ~ 2200 3800
+Wire Wire Line
+	2200 4100 2800 4100
+Wire Wire Line
+	2800 4100 2800 3900
+Wire Wire Line
+	2800 3900 2750 3900
+Wire Wire Line
+	2550 3900 2550 3800
+Wire Wire Line
+	2650 3900 2650 3800
+Connection ~ 2650 3900
+Wire Wire Line
+	2650 3900 2550 3900
+Wire Wire Line
+	2750 3800 2750 3900
+Connection ~ 2750 3900
+Wire Wire Line
+	2750 3900 2650 3900
+Wire Wire Line
+	2800 3900 2850 3900
+Wire Wire Line
+	3050 3900 3050 3800
+Connection ~ 2800 3900
+Wire Wire Line
+	2950 3800 2950 3900
+Connection ~ 2950 3900
+Wire Wire Line
+	2950 3900 3050 3900
+Wire Wire Line
+	2850 3800 2850 3900
+Connection ~ 2850 3900
+Wire Wire Line
+	2850 3900 2950 3900
+$Comp
+L power:GND #PWR0113
+U 1 1 5C276254
+P 2200 4100
+F 0 "#PWR0113" H 2200 3850 50  0001 C CNN
+F 1 "GND" H 2205 3927 50  0000 C CNN
+F 2 "" H 2200 4100 50  0001 C CNN
+F 3 "" H 2200 4100 50  0001 C CNN
+	1    2200 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 4100
+Text Label 2450 3100 1    50   ~ 0
+RX_4
+Text Label 2550 3100 1    50   ~ 0
+TX_4
+Text Label 2650 3100 1    50   ~ 0
+RX_3
+Text Label 2750 3100 1    50   ~ 0
+TX_3
+Text Label 2850 3100 1    50   ~ 0
+RX_2
+Text Label 2950 3100 1    50   ~ 0
+TX_2
+Text Label 3050 3100 1    50   ~ 0
+RX_1
+Text Label 3150 3100 1    50   ~ 0
+TX_1
+$EndSCHEMATC
